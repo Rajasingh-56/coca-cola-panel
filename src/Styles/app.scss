@@ -1,0 +1,24 @@
+@use "../Styles/colors" as colors;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: auto;
+  max-width: 450px;
+  font-family: "Montserrat", sans-serif;
+  background-color: colors.$gray-light;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  flex: 1;
+}
+

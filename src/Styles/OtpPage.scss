@@ -1,0 +1,81 @@
+@use "../Styles/colors" as colors;
+@use "../Styles/mixin" as mix;
+
+.otp-info {
+  @include mix.flex-center-column;
+  gap: 2rem;
+  padding: 2rem 0;
+
+  input {
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(105, 105, 105);
+    width: 388px;
+    height: 4rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+  }
+  .lgn-btn {
+    button {
+      padding: 1.2rem 1.5rem;
+      font-size: 1.3rem;
+      text-align: center;
+      background-color: colors.$red;
+      color: colors.$white;
+      font-weight: 800;
+      border: none;
+      width: 16rem;
+      border-radius: 1rem;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(255, 0, 0, 0.836);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+  .otpcount-text {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-size: 0.9rem;
+      font-weight: 600;
+      span {
+        border: 2px dotted colors.$black;
+        font-size: 0.9rem;
+        padding: 0.4rem;
+        border-radius: 100%;
+        margin-right: .5rem;
+      }
+    }
+    .resend-btn {
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      color: colors.$red;
+      font-weight: 600;
+      border-bottom: 1px solid colors.$red;
+      &:hover {
+        color: rgb(235, 14, 14);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    .go-back-btn {
+      font-size: 0.9rem;
+      cursor: pointer;
+      background-color: colors.$red;
+      font-weight: 600;
+      border: none;
+      color: colors.$white;
+      padding: 0.3rem 0.9rem;
+      border-radius: 0.3rem;
+      &:hover {
+        background-color: rgba(255, 0, 0, 0.836);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}

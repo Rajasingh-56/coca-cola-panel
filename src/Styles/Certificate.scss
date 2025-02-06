@@ -1,0 +1,43 @@
+@use "../Styles/colors" as colors;
+@use "../Styles/mixin" as mix;
+
+.certificate-section {
+  padding: 3rem 2rem;
+  .letter-pic {
+    text-align: center;
+    .letter-info {
+      @include mix.flex-center-column;
+      gap: 2rem;
+      .cola-img {
+        width: 10rem;
+        margin-bottom: 2rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      .certificate-img{
+        width: 21rem;
+        height: auto;
+        border: 10px solid colors.$red;
+        border-radius: .8rem;
+      }
+      button {
+        padding: 1.2rem 1.5rem;
+        font-size: 1.3rem;
+        text-align: center;
+        background-color: colors.$red;
+        color: colors.$white;
+        font-weight: bold;
+        border: none;
+        width: 16rem;
+        border-radius: 1rem;
+        margin-top: 1.5rem;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(255, 0, 0, 0.836);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}

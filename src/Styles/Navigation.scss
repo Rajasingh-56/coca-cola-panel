@@ -1,0 +1,25 @@
+@use "../Styles/colors" as color;
+@use "../Styles/mixin" as mix;
+
+.navigation-section {
+  .nav-info {
+    padding: 3rem 0 1rem;
+    .nav-bar {
+      @include mix.flex-center-column;
+      gap: 1rem;
+      text-align: center;
+      .cola-img {
+        width: 10rem;
+        margin-bottom: 2rem;
+      }
+      .offer-img {
+        width: 26rem;
+        height: auto;
+        margin-bottom: 2rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
