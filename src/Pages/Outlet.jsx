@@ -56,15 +56,15 @@ const Outlet = () => {
                       <option value="Meghana">Meghana</option>
                       <option value="Beharoz"> Beharoz</option>
                     </select>{" "}
+                    <span className="icon-down">
+                      <FaChevronDown />
+                    </span>
                     <input
                       className="outlet-input-box"
                       type="select"
                       readOnly
                       placeholder={selectedOption}
                     />
-                    <span className="icon-down">
-                      <FaChevronDown />
-                    </span>
                     {errors.outlet && touched.outlet && (
                       <span className="error">{errors.outlet}</span>
                     )}

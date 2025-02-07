@@ -2,7 +2,7 @@
 @use "../Styles/mixin" as mix;
 
 .outlet-section {
-  padding: 0 1rem;
+  // padding: 0 1rem;
 }
 .outlet-box {
   padding: 0 1rem;
@@ -22,7 +22,7 @@
       .outlet-form-input {
         position: relative;
         width: 100%;
-        select {
+        select{
           padding: 1rem 1rem;
           font-size: 1rem;
           text-align: center;
@@ -38,18 +38,18 @@
           opacity: 0;
           cursor: pointer;
         }
-
+      
         .icon-down {
           position: absolute;
-          top: 36%;
-          right: 10%;
+          top: 1rem;
+          right: 2rem;
         }
         input {
           background-color: colors.$white;
           padding: 1rem 1rem;
           font-size: 1rem;
           text-align: center;
-          // width: 388px;
+          width: 388px;
           width: 100%;
           height: auto;
           font-weight: 600;
@@ -79,7 +79,7 @@
           margin-top: .2rem;
         }
         label {
-          font-size: 0.7rem;
+          font-size: 0.75rem;
           font-weight: 600;
           color: rgba(99, 99, 99, 1);
           cursor: pointer;

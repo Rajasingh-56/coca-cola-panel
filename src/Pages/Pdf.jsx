@@ -12,6 +12,7 @@ const Pdf = () => {
   const navigate = useNavigate();
 
   const differentOutlet = () => {
+    console.log("Choose another outlet");
     navigate("/outlet");
   };
 
