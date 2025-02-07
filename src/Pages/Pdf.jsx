@@ -1,6 +1,6 @@
 import React from "react";
 import BrandImage from "../assets/Logo.png";
-import PdfImage from "../assets/1714 2.png";
+import PdfImage from "../assets/pdfimage.png";
 import PdfUser from "../assets/outlet-user.png";
 import { FiDownload } from "react-icons/fi";
 import { FaChevronLeft } from "react-icons/fa";

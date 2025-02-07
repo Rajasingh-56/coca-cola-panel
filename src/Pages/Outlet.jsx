@@ -32,7 +32,7 @@ const Outlet = () => {
             }}
             validationSchema={outletValid}
             onSubmit={(values) => {
-              console.log("Outlet Name", values.outlet);
+              console.log("Outlet Name:", values.outlet);
               if (values.outlet === "Meghana") {
                 navigate("/certificate");
               } else if (values.outlet === "Beharoz") {
@@ -70,37 +70,34 @@ const Outlet = () => {
                     )}
                   </div>
 
-                  <div className="admission-form">
-                    <div className="chk-sec">
-                      <div className="input-box-check">
-                        <input
-                          name="checkbox"
-                          type="checkbox"
-                          onChange={handleChange}
-                          value={values.checkbox}
-                          onBlur={handleBlur}
-                        />
-                      </div>
+                  <div className="admission-form wrapper-form">
+                    <div className="wrapper">
+                      <input
+                        id="check"
+                        name="checkbox"
+                        type="checkbox"
+                        onChange={handleChange}
+                        value={values.checkbox}
+                        onBlur={handleBlur}
+                      />
 
-                      <div className="terms-accept">
-                        <p>
-                          We irrevocably permit Coca-Cola India Pvt. Ltd. to use
-                          our Restaurant/Food Outlet’s name, images, logo and
-                          details as part of the Coke Foodmarks Campaign and
-                          cover/list the Campaign through various media
-                          including social media platforms, newspapers, radio,
-                          television including news, and other OTT
-                          channels/platforms, internet, point of sale materials,
-                          microsite, food delivery applications etc., and shall
-                          not raise any objection, protest, or demur whatsoever
-                          to such coverage or in this regard. We also consent to
-                          the attached Terms & Conditions.
-                        </p>
-                        {errors.checkbox && touched.checkbox && (
-                          <span className="error">{errors.checkbox}</span>
-                        )}
-                      </div>
+                      <label htmlFor={"check"}>
+                        We irrevocably permit Coca-Cola India Pvt. Ltd. to use
+                        our Restaurant/Food Outlet’s name, images, logo and
+                        details as part of the Coke Foodmarks Campaign and
+                        cover/list the Campaign through various media including
+                        social media platforms, newspapers, radio, television
+                        including news, and other OTT channels/ <br />
+                        platforms, internet, point of sale materials, microsite,
+                        food delivery applications etc., and shall not raise any
+                        objection, protest, or demur whatsoever to such coverage
+                        or in this regard. We also consent to the attached Terms
+                        & Conditions.
+                      </label>
                     </div>
+                    {errors.checkbox && touched.checkbox && (
+                      <span className="error">{errors.checkbox}</span>
+                    )}
                   </div>
                 </div>
 

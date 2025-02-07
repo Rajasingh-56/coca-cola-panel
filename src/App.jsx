@@ -12,9 +12,9 @@ function App() {
   return (
     <div className="app">
       <div className="app-content">
-        <Router basename="/coca-cola-panel/">
+        <Router basename="/coca-cola-panel">
           <Routes>
-            <Route index element={<Login />} />
+            <Route path="/" element={<Login />} />
             <Route path="/otp" element={<OtpPage />} />
             <Route path="/outlet" element={<Outlet />} />
             <Route path="/formpage" element={<FormPage />} />

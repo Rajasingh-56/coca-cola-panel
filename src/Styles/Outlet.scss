@@ -1,8 +1,10 @@
 @use "../Styles/colors" as colors;
 @use "../Styles/mixin" as mix;
 
+.outlet-section {
+  padding: 0 1rem;
+}
 .outlet-box {
-  @include mix.flex-center-column;
   padding: 0 1rem;
 
   h2 {
@@ -13,10 +15,6 @@
   }
 
   form {
-    @include mix.flex-center-column;
-    padding: 0 1rem;
-    gap: 1rem;
-
     .form-pos {
       @include mix.flex-center-column;
       padding: 0 1rem;
@@ -38,19 +36,21 @@
           top: 0;
           right: 0;
           opacity: 0;
+          cursor: pointer;
         }
 
         .icon-down {
           position: absolute;
-          top: 1rem;
-          right: 2rem;
+          top: 36%;
+          right: 10%;
         }
         input {
           background-color: colors.$white;
           padding: 1rem 1rem;
           font-size: 1rem;
           text-align: center;
-          width: 388px;
+          // width: 388px;
+          width: 100%;
           height: auto;
           font-weight: 600;
           border: none;
@@ -58,48 +58,81 @@
         }
       }
 
-      .chk-sec {
+      .wrapper {
         display: flex;
         justify-content: center;
         align-items: start;
-        gap: 0.8rem;
-        text-align: start;
-        input {
+        gap: 1rem;
+        input[type="checkbox"] {
+          appearance: none;
           cursor: pointer;
+          -webkit-appearance: none;
+          height: 1.2rem;
+          width: 5.7rem;
+          background-color: colors.$gray-light;
+          outline: none;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          border-radius: 0.2rem;
+          border: 2px solid #000;
+          margin-top: .2rem;
         }
-        p {
-          font-size: 0.8rem;
-          margin-left: 0.5rem;
-          line-height: 13.19px;
-          font-weight: 500;
+        label {
+          font-size: 0.7rem;
+          font-weight: 600;
           color: rgba(99, 99, 99, 1);
           cursor: pointer;
-          margin-bottom: 2.5rem;
+        }
+        input[type="checkbox"]::after {
+          font-family: "Font Awesome 6 Free";
+          content: "\f00c";
+          font-weight: bold;
+          color: #fff;
+          font-size: 0.9rem;
+          text-align: center;
+          display: none;
+
+        }
+
+        input[type="checkbox"]:checked {
+          background-color: #0083e8;
+          border: none;
+          border: 2px solid #0083e8;
+
+
+        }
+        input[type="checkbox"]:checked::after {
+          display: block;
+          // border: none;
+
         }
       }
     }
-    button {
-      padding: 1rem 1.5rem;
-      font-size: 1.3rem;
+    .lgn-btn {
       text-align: center;
-      background-color: colors.$red;
-      color: colors.$white;
-      font-weight: 800;
-      border: none;
-      width: 16rem;
-      border-radius: 1rem;
+      button {
+        padding: 1rem 1.5rem;
+        font-size: 1.3rem;
+        background-color: colors.$red;
+        color: colors.$white;
+        font-weight: 800;
+        border: none;
+        width: 60%;
+        border-radius: 1rem;
+        margin-top: 3rem;
 
-      cursor: pointer;
-      &:hover {
-        background-color: rgba(255, 0, 0, 0.836);
-        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(255, 0, 0, 0.836);
+          transition: all 0.3s ease-in-out;
+        }
       }
     }
   }
 }
 
 .error {
-  color: red; /* Error messages in red */
+  color: red;
   font-size: 0.8rem;
-  // margin-bottom: 1rem;
 }

@@ -14,29 +14,32 @@
         @include mix.flex-center-column;
         width: 100%;
         .form-pos {
-          position: relative;
           margin-bottom: 2rem;
           display: flex;
           align-items: center;
-          input {
-            padding: 1rem 1rem;
-            font-size: 1rem;
-            text-align: center;
-            color: rgb(105, 105, 105);
-            width: 388px;
-            height: 4rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 0.5rem;
-          }
-          .digit {
-            position: absolute;
-            right: 20rem;
-            font-size: 1rem;
-            color: colors.$input-color;
-            font-weight: 600;
-            padding: 1rem 1rem;
-            border-right: 3px solid colors.$gray-light;
+          .admission-form {
+            position: relative;
+            input {
+              padding: 1rem 2rem 1rem 5rem;
+              font-size: 1rem;
+              text-align: center;
+              color: rgb(105, 105, 105);
+              width: 388px;
+              height: 4rem;
+              font-weight: 600;
+              border: none;
+              border-radius: 0.5rem;
+            }
+            .digit {
+              position: absolute;
+              top: 0.5rem;
+              left: 0.5rem;
+              font-size: 1rem;
+              color: colors.$input-color;
+              font-weight: 600;
+              padding: 1rem 1.4rem;
+              border-right: 3px solid colors.$gray-light;
+            }
           }
         }
       }

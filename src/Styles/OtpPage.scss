@@ -2,33 +2,34 @@
 @use "../Styles/mixin" as mix;
 
 .otp-info {
-  @include mix.flex-center-column;
+  text-align: center;
   gap: 2rem;
   padding: 2rem 0;
 
   input {
-    padding: 1rem 1rem;
+    padding: 1.2rem 1rem;
     font-size: 1rem;
     text-align: center;
     color: rgb(105, 105, 105);
-    width: 388px;
-    height: 4rem;
+    width: 350px;
     font-weight: 600;
     border: none;
     border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
   }
   .lgn-btn {
     button {
-      padding: 1.2rem 1.5rem;
+      padding: 1.1rem 3rem;
       font-size: 1.3rem;
       text-align: center;
       background-color: colors.$red;
       color: colors.$white;
       font-weight: 800;
       border: none;
-      width: 16rem;
       border-radius: 1rem;
       cursor: pointer;
+      margin-bottom: 2rem;
+
       &:hover {
         background-color: rgba(255, 0, 0, 0.836);
         transition: all 0.3s ease-in-out;
@@ -48,7 +49,7 @@
         font-size: 0.9rem;
         padding: 0.4rem;
         border-radius: 100%;
-        margin-right: .5rem;
+        margin-right: 0.5rem;
       }
     }
     .resend-btn {

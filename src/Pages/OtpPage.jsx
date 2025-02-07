@@ -19,7 +19,6 @@ const OtpPage = () => {
     navigate("/outlet");
   };
 
-  //Resend otp
   const resendOtp = () => {
     if (!otpResent) {
       console.log("Resending OTP.... ");
@@ -31,9 +30,8 @@ const OtpPage = () => {
   useEffect(() => {
     if (countdown <= 0) return;
     const interval = setInterval(() => {
-      setCountdown((prevCountdown) => Math.max(prevCountdown - 1, 0)); // Decrease countdown, but never below 0
+      setCountdown((prevCountdown) => Math.max(prevCountdown - 1, 0));
     }, 1000);
-
     return () => clearInterval(interval);
   }, [countdown]);
 

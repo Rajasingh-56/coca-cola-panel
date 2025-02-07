@@ -45,11 +45,11 @@ const Login = () => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                     />
+                    <div className="digit">+91</div>
                     {errors.phone && touched.phone && (
                       <span className="error">{errors.phone}</span>
                     )}
                   </div>
-                  <div className="digit">+91</div>
                 </div>
 
                 <div className="lgn-btn">
